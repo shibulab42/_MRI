@@ -172,24 +172,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (typeof manualPublications !== 'undefined') {
             const categories = [
-                { key: 'international_journals', title: 'Original Articles (International)' },
-                { key: 'domestic_journals', title: 'Original Articles (Domestic)' },
-                { key: 'books', title: 'Books' },
-                { key: 'domestic_conferences', title: 'Domestic Conferences / Invited Lectures' },
-                { key: 'international_conferences', title: 'International Conferences' }
+                { key: 'international_journals', title: 'Original Articles (International)', className: 'pub-int-journal' },
+                { key: 'domestic_journals', title: 'Original Articles (Domestic)', className: 'pub-dom-journal' },
+                { key: 'books', title: 'Books', className: 'pub-book' },
+                { key: 'international_conferences', title: 'International Conferences', className: 'pub-int-conf' },
+                { key: 'domestic_conferences', title: 'Domestic Conferences / Invited Lectures', className: 'pub-dom-conf' }
             ];
 
             categories.forEach(cat => {
                 if (manualPublications[cat.key] && manualPublications[cat.key].length > 0) {
                     const sectionTitle = document.createElement('h3');
                     sectionTitle.className = 'mt-8 mb-4 text-xl font-bold text-slate-800 border-b pb-2';
+                    sectionTitle.style.borderBottom = `3px solid ${getComputedStyle(document.documentElement).getPropertyValue('--accent-color')}`;
                     sectionTitle.textContent = cat.title;
                     pubContainer.appendChild(sectionTitle);
 
                     manualPublications[cat.key].forEach(pubString => {
                         const div = document.createElement('div');
-                        div.className = 'publication-item mb-4 p-4 bg-white rounded shadow-sm border border-slate-200';
-                        div.innerHTML = `<p class="text-slate-700">${pubString}</p>`;
+                        div.className = `publication-card ${cat.className}`;
+                        div.innerHTML = `<p class="publication-text">${pubString}</p>`;
                         pubContainer.appendChild(div);
                     });
                 }
