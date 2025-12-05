@@ -31,6 +31,32 @@ const manualProfile = {
             "ja": "脳画像解析",
             "en": "Brain Image Analysis"
         }
+    ],
+    "lab_members": {
+        "collaborators": [
+            "吉丸 大輔 (Daisuke Yoshimaru) - Jikei University School of Medicine, Division of Regenerative Medicine / Department of Radiology, Tokyo Medical University",
+            "臼井 圭介 (Keisuke Usui) - Faculty of Health Science, Department of Radiological Technology, Juntendo University",
+            "林 直弥 (Naoya Hayashi) - Department of Radiology, Tokyo Medical University"
+        ],
+        "masters": [
+            "赤羽 萌衣",
+            "橋 彩乃"
+        ],
+        "undergraduates": [
+            "富田晴翔",
+            "橋本夏音",
+            "月原ゆい",
+            "清水航世",
+            "小笠原和",
+            "髙野里菜",
+            "上ノ山勇斗"
+        ]
+    },
+    "awards": [
+        "2025年4月 ISMRM Travel Award, 日本磁気共鳴医学会 - 渋川周平",
+        "2025年3月 第27回日本ヒト脳マッピング学会 早期キャリア研究者奨励賞, 日本ヒト脳マッピング学会 - 渋川周平",
+        "2021年4月 2020年度日本放射線技術学会 技術奨励賞（撮影分野（MR））, 日本放射線技術学会 - 渋川周平",
+        "2020年4月 第76回日本放射線技術学会総会学術大会 Cypos賞 President Award, 日本放射線技術学会 - 渋川周平"
     ]
 };
 

@@ -121,20 +121,31 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Awards ---
     const awardsContainer = document.getElementById('awards-container');
     if (awardsContainer) {
-        const awards = data.filter(item => item.type === 'awards' && item.display === 'disclosed')
-            .sort((a, b) => (b.award_date || '').localeCompare(a.award_date || ''));
+        awardsContainer.innerHTML = ''; // Clear existing
 
-        awards.forEach(item => {
-            const div = document.createElement('div');
-            div.className = 'publication-item'; // Reuse style
-            const name = getEn(item.award_name);
-            const title = getEn(item.award_title);
-            const date = item.award_date;
-            div.innerHTML = `<div class="publication-title">${name}</div>
-                             <div class="publication-authors">${title}</div>
-                             <div class="publication-journal">${date}</div>`;
-            awardsContainer.appendChild(div);
-        });
+        if (typeof manualProfile !== 'undefined' && manualProfile.awards) {
+            manualProfile.awards.forEach(award => {
+                const div = document.createElement('div');
+                div.className = 'publication-item mb-4 p-4 bg-white rounded shadow-sm border border-slate-200';
+                div.innerHTML = `<p class="text-slate-700">${award}</p>`;
+                awardsContainer.appendChild(div);
+            });
+        } else {
+            const awards = data.filter(item => item.type === 'awards' && item.display === 'disclosed')
+                .sort((a, b) => (b.award_date || '').localeCompare(a.award_date || ''));
+
+            awards.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'publication-item'; // Reuse style
+                const name = getEn(item.award_name);
+                const title = getEn(item.award_title);
+                const date = item.award_date;
+                div.innerHTML = `<div class="publication-title">${name}</div>
+                                 <div class="publication-authors">${title}</div>
+                                 <div class="publication-journal">${date}</div>`;
+                awardsContainer.appendChild(div);
+            });
+        }
     }
 
     // --- Publications ---
@@ -209,3 +220,37 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+// --- Lab Members Page ---
+const collaboratorsContainer = document.getElementById('collaborators-container');
+if (collaboratorsContainer && typeof manualProfile !== 'undefined' && manualProfile.lab_members) {
+    collaboratorsContainer.innerHTML = '';
+    manualProfile.lab_members.collaborators.forEach(member => {
+        const div = document.createElement('div');
+        div.className = 'member-card-small';
+        div.innerHTML = <p></p>;
+        collaboratorsContainer.appendChild(div);
+    });
+}
+
+const mastersContainer = document.getElementById('masters-container');
+if (mastersContainer && typeof manualProfile !== 'undefined' && manualProfile.lab_members) {
+    mastersContainer.innerHTML = '';
+    manualProfile.lab_members.masters.forEach(member => {
+        const div = document.createElement('div');
+        div.className = 'member-card-small';
+        div.innerHTML = <p></p>;
+        mastersContainer.appendChild(div);
+    });
+}
+
+const undergradsContainer = document.getElementById('undergrads-container');
+if (undergradsContainer && typeof manualProfile !== 'undefined' && manualProfile.lab_members) {
+    undergradsContainer.innerHTML = '';
+    manualProfile.lab_members.undergraduates.forEach(member => {
+        const div = document.createElement('div');
+        div.className = 'member-card-small';
+        div.innerHTML = <p></p>;
+        undergradsContainer.appendChild(div);
+    });
+}
