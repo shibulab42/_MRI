@@ -183,23 +183,64 @@ footer {
 }
 
 /* Publications List */
-.publication-item {
+.publication-card {
     background-color: var(--white);
     border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
     padding: 1.5rem;
     margin-bottom: 1rem;
-    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-left-width: 5px;
 }
+
+.publication-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Color Accents */
+.pub-int-journal {
+    border-left-color: #3b82f6;
+}
+
+/* Blue */
+.pub-dom-journal {
+    border-left-color: #14b8a6;
+}
+
+/* Teal */
+.pub-book {
+    border-left-color: #f97316;
+}
+
+/* Orange */
+.pub-int-conf {
+    border-left-color: #a855f7;
+}
+
+/* Purple */
+.pub-dom-conf {
+    border-left-color: #ec4899;
+}
+
+/* Pink */
+.pub-misc {
+    border-left-color: #64748b;
+}
+
+/* Slate */
 
 .publication-title {
     font-weight: 700;
     color: var(--primary-color);
     margin-bottom: 0.5rem;
+    line-height: 1.4;
 }
 
 .publication-authors {
     color: var(--secondary-color);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     margin-bottom: 0.5rem;
 }
 
@@ -276,6 +317,7 @@ footer {
     border: 3px solid var(--accent-color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 /* Lab Members */
 .member-section {
     margin-bottom: 3rem;
@@ -374,7 +416,7 @@ footer {
         flex-direction: column;
         padding: 1rem;
     }
-    
+
     .nav-links {
         flex-direction: column;
         gap: 0.5rem;
@@ -382,32 +424,32 @@ footer {
         width: 100%;
         text-align: center;
     }
-    
+
     .hero h1 {
         font-size: 2rem;
     }
-    
+
     .hero p {
         font-size: 1rem;
     }
-    
+
     .card-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .instagram-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .pdf-container {
         height: 400px;
     }
-    
+
     .member-card {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .member-photo {
         margin: 0 auto 1rem;
     }
@@ -417,11 +459,11 @@ footer {
     .hero h1 {
         font-size: 1.5rem;
     }
-    
+
     .instagram-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .pdf-container {
         height: 300px;
     }
