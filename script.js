@@ -95,15 +95,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Research Interests ---
+    // --- Research Interests ---
     const interestsContainer = document.getElementById('interests-container');
     if (interestsContainer) {
-        const interests = data.filter(item => item.type === 'research_interests' && item.display === 'disclosed');
-        interests.forEach(item => {
-            const div = document.createElement('div');
-            div.className = 'card text-center';
-            div.innerHTML = `<h3>${getEn(item.keyword)}</h3>`;
-            interestsContainer.appendChild(div);
-        });
+        if (typeof manualProfile !== 'undefined' && manualProfile.research_interests) {
+            // Use manual text description
+            interestsContainer.className = 'card'; // Change from card-grid to single card
+            interestsContainer.innerHTML = `<p style="white-space: pre-wrap; line-height: 1.8;">${manualProfile.research_interests}</p>`;
+        } else {
+            // Fallback to keywords from JSONL
+            const interests = data.filter(item => item.type === 'research_interests' && item.display === 'disclosed');
+            interests.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'card text-center';
+                div.innerHTML = `<h3>${getEn(item.keyword)}</h3>`;
+                interestsContainer.appendChild(div);
+            });
+        }
     }
 
     // --- Research Areas ---
