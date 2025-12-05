@@ -70,7 +70,10 @@ const manualProfile = {
         "2021年4月 2020年度日本放射線技術学会 技術奨励賞（撮影分野（MR））, 日本放射線技術学会 - 渋川周平",
         "2020年4月 第76回日本放射線技術学会総会学術大会 Cypos賞 President Award, 日本放射線技術学会 - 渋川周平"
     ],
-    "research_interests": "磁気共鳴画像（MRI）を用いたヒトの生体機能評価を専門とし、脳神経系および骨格筋に関する定量的イメージングの研究に取り組んでいます。\n定量磁化率マッピング（QSM）や温度・血流イメージングなどの先進的手法を用い、運動負荷時の骨格筋代謝の可視化や、精神・神経疾患に伴う脳微細構造の変化の解明を目指しています。\nまた、リハビリテーション医学分野との共同研究を通じて、画像診断技術の臨床応用や治療評価への貢献にも取り組んでいます。\nMRIの可能性を拡張し、医療・スポーツ・神経科学をつなぐイメージング技術の発展に貢献することを目指しています。"
+    "research_interests": {
+        "ja": "磁気共鳴画像（MRI）を用いたヒトの生体機能評価を専門とし、脳神経系および骨格筋に関する定量的イメージングの研究に取り組んでいます。\n定量磁化率マッピング（QSM）や温度・血流イメージングなどの先進的手法を用い、運動負荷時の骨格筋代謝の可視化や、精神・神経疾患に伴う脳微細構造の変化の解明を目指しています。\nまた、リハビリテーション医学分野との共同研究を通じて、画像診断技術の臨床応用や治療評価への貢献にも取り組んでいます。\nMRIの可能性を拡張し、医療・スポーツ・神経科学をつなぐイメージング技術の発展に貢献することを目指しています。",
+        "en": "We specialize in the evaluation of human biological functions using Magnetic Resonance Imaging (MRI), conducting research on quantitative imaging of the nervous system and skeletal muscle.\nUsing advanced techniques such as Quantitative Susceptibility Mapping (QSM) and temperature/blood flow imaging, we aim to visualize skeletal muscle metabolism during exercise and elucidate changes in brain microstructure associated with psychiatric and neurological disorders.\nWe are also working on the clinical application of diagnostic imaging technologies and contributing to treatment evaluation through collaborative research with the field of rehabilitation medicine.\nWe aim to expand the possibilities of MRI and contribute to the development of imaging technologies that connect medicine, sports, and neuroscience."
+    }
 };
 
 const manualPublications = {

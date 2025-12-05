@@ -101,7 +101,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (typeof manualProfile !== 'undefined' && manualProfile.research_interests) {
             // Use manual text description
             interestsContainer.className = 'card'; // Change from card-grid to single card
-            interestsContainer.innerHTML = `<p style="white-space: pre-wrap; line-height: 1.8;">${manualProfile.research_interests}</p>`;
+
+            let content = '';
+            if (typeof manualProfile.research_interests === 'object') {
+                content += `<p style="white-space: pre-wrap; line-height: 1.8; margin-bottom: 1.5rem;">${manualProfile.research_interests.ja}</p>`;
+                content += `<hr style="border: 0; border-top: 1px solid #eee; margin: 1.5rem 0;">`;
+                content += `<p style="white-space: pre-wrap; line-height: 1.8;">${manualProfile.research_interests.en}</p>`;
+            } else {
+                content = `<p style="white-space: pre-wrap; line-height: 1.8;">${manualProfile.research_interests}</p>`;
+            }
+            interestsContainer.innerHTML = content;
         } else {
             // Fallback to keywords from JSONL
             const interests = data.filter(item => item.type === 'research_interests' && item.display === 'disclosed');
