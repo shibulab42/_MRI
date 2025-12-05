@@ -367,3 +367,62 @@ footer {
     height: 100%;
     border: none;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .pdf-container {
+        height: 400px;
+    }
+    
+    .member-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .member-photo {
+        margin: 0 auto 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .instagram-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pdf-container {
+        height: 300px;
+    }
+}
