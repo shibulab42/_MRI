@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shuhei Shibukawa - Researcher Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Shibukawa Lab</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="profile.png" alt="Shuhei Shibukawa" class="profile-photo">
+            <h1>Shuhei Shibukawa</h1>
+            <p>Associate Professor at Juntendo University<br>Specializing in MRI, Neurofluids, and Radiological Science
+            </p>
+            <a href="research.html" class="btn">View Research</a>
+        </section>
+
+        <section id="profile">
+            <h2>Profile</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Affiliations</h3>
+                    <ul id="affiliations-list" style="list-style: none; padding-left: 0;">
+                        <!-- Populated by JS -->
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Education</h3>
+                    <ul id="education-list" style="list-style: none; padding-left: 0;">
+                        <!-- Populated by JS -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="research-overview">
+            <h2>Research Overview</h2>
+            <div class="card">
+                <p>Our laboratory focuses on advanced MRI techniques, neurofluids research, and radiological science. We develop innovative imaging methods to better understand brain function and pathology.</p>
+                <div class="mt-4">
+                    <a href="research_overview.pdf" target="_blank" class="btn">View Research Overview (PDF)</a>
+                </div>
+            </div>
+        </section>
+
+<section id="instagram">
+            <h2>Latest Updates</h2>
+            <p class="text-center mb-4" style="color: var(--light-text-color);">
+                Follow <a href="https://www.instagram.com/shibukawa_sotsuken" target="_blank"
+                    style="color: #E1306C; font-weight: 600;">@shibukawa_sotsuken</a> on Instagram
+            </p>
+
+            <!-- Instagram Feed Placeholder -->
+            <!-- To make this live, replace the content below with an embed code from a service like SnapWidget or Elfsight -->
+            <div class="instagram-grid">
+                <a href="https://www.instagram.com/shibukawa_sotsuken" target="_blank" class="instagram-item">
+                    <img src="instagram_post_1.png" alt="Brain MRI Scan" class="instagram-img">
+                </a>
+                <a href="https://www.instagram.com/shibukawa_sotsuken" target="_blank" class="instagram-item">
+                    <img src="instagram_post_2.png" alt="Research Laboratory" class="instagram-img">
+                </a>
+                <a href="https://www.instagram.com/shibukawa_sotsuken" target="_blank" class="instagram-item">
+                    <img src="instagram_post_3.png" alt="3D Brain Model" class="instagram-img">
+                </a>
+                <a href="https://www.instagram.com/shibukawa_sotsuken" target="_blank" class="instagram-item">
+                    <img src="instagram_post_4.png" alt="Research Team" class="instagram-img">
+                </a>
+            </div>
+            <div class="text-center mt-4">
+                <a href="https://www.instagram.com/shibukawa_sotsuken" target="_blank" class="btn"
+                    style="background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); border: none;">
+                    View on Instagram
+                </a>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p class="text-center">
+                For inquiries, please refer to the official university contact points.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Shuhei Shibukawa. All rights reserved.</p>
+        <p style="margin-top: 0.5rem;">
+            <a href="https://www.instagram.com/shibukawa_sotsuken" target="_blank"
+                style="color: #cbd5e1; text-decoration: none; font-size: 0.9rem;">
+                Instagram: @shibukawa_sotsuken
+            </a>
+        </p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
