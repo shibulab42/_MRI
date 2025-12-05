@@ -228,7 +228,11 @@ if (collaboratorsContainer && typeof manualProfile !== 'undefined' && manualProf
     manualProfile.lab_members.collaborators.forEach(member => {
         const div = document.createElement('div');
         div.className = 'member-card-small';
-        div.innerHTML = <p></p>;
+        if (typeof member === 'object') {
+            div.innerHTML = `<p><strong>${member.name_en} (${member.name_ja})</strong><br>${member.affiliation}</p>`;
+        } else {
+            div.innerHTML = `<p>${member}</p>`;
+        }
         collaboratorsContainer.appendChild(div);
     });
 }
@@ -239,7 +243,7 @@ if (mastersContainer && typeof manualProfile !== 'undefined' && manualProfile.la
     manualProfile.lab_members.masters.forEach(member => {
         const div = document.createElement('div');
         div.className = 'member-card-small';
-        div.innerHTML = <p></p>;
+        div.innerHTML = `<p>${member}</p>`;
         mastersContainer.appendChild(div);
     });
 }
@@ -250,7 +254,8 @@ if (undergradsContainer && typeof manualProfile !== 'undefined' && manualProfile
     manualProfile.lab_members.undergraduates.forEach(member => {
         const div = document.createElement('div');
         div.className = 'member-card-small';
-        div.innerHTML = <p></p>;
+        div.innerHTML = `<p>${member}</p>`;
         undergradsContainer.appendChild(div);
     });
 }
+
