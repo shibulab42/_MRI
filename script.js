@@ -79,25 +79,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- What's New ---
     const whatsNewList = document.getElementById('whats-new-list');
-    if (whatsNewList && typeof newsItems !== 'undefined') {
-        newsItems.forEach(item => {
-            const div = document.createElement('div');
-            div.className = 'news-item mb-4 pb-2 border-b border-gray-100 last:border-0';
+    if (whatsNewList) {
+        fetch('news.txt')
+            .then(response => {
+                if (!response.ok) throw new Error('Network response was not ok');
+                return response.text();
+            })
+            .then(text => {
+                const lines = text.split('\n').filter(line => line.trim() !== '');
+                lines.forEach(line => {
+                    // Format: YYYY.MM [Category] Title | URL
+                    const match = line.match(/^(\d{4}\.\d{2})\s+\[(.*?)\]\s+(.*?)(?:\s*\|\s*(.*))?$/);
 
-            let content = `<div class="text-sm text-gray-500 mb-1">${item.date} <span class="px-2 py-0.5 rounded text-xs ${item.category === 'Award' ? 'bg-yellow-100 text-yellow-800' : 'bg-blue-100 text-blue-800'}">${item.category}</span></div>`;
+                    if (match) {
+                        const date = match[1];
+                        const category = match[2];
+                        const title = match[3];
+                        const url = match[4];
 
-            if (item.url) {
-                content += `<a href="${item.url}" target="_blank" class="block hover:text-blue-600 transition-colors">${item.title}</a>`;
-            } else {
-                content += `<p>${item.title}</p>`;
-            }
+                        const div = document.createElement('div');
+                        div.className = 'news-item mb-4 pb-2 border-b border-gray-100 last:border-0';
 
-            div.innerHTML = content;
-            whatsNewList.appendChild(div);
-        });
+                        let content = `<div class="text-sm text-gray-500 mb-1">${date} <span class="px-2 py-0.5 rounded text-xs ${category.includes('Award') ? 'bg-yellow-100 text-yellow-800' : 'bg-blue-100 text-blue-800'}">${category}</span></div>`;
+
+                        if (url) {
+                            content += `<a href="${url.trim()}" target="_blank" class="block hover:text-blue-600 transition-colors">${title}</a>`;
+                        } else {
+                            content += `<p>${title}</p>`;
+                        }
+
+                        div.innerHTML = content;
+                        whatsNewList.appendChild(div);
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Error loading news:', error);
+                whatsNewList.innerHTML = '<p class="text-gray-500">Latest updates loading...</p>';
+            });
     }
 
-    // --- Research Interests ---
     // --- Research Interests ---
     const interestsContainer = document.getElementById('interests-container');
     if (interestsContainer) {
@@ -279,4 +300,3 @@ if (undergradsContainer && typeof manualProfile !== 'undefined' && manualProfile
         undergradsContainer.appendChild(div);
     });
 }
-
