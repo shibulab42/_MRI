@@ -77,20 +77,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- Education ---
-    const educationList = document.getElementById('education-list');
-    if (educationList) {
-        const education = data.filter(item => item.type === 'education' && item.display === 'disclosed')
-            .sort((a, b) => (b.from_date || '').localeCompare(a.from_date || ''));
+    // --- What's New ---
+    const whatsNewList = document.getElementById('whats-new-list');
+    if (whatsNewList && typeof newsItems !== 'undefined') {
+        newsItems.forEach(item => {
+            const div = document.createElement('div');
+            div.className = 'news-item mb-4 pb-2 border-b border-gray-100 last:border-0';
 
-        education.forEach(item => {
-            const li = document.createElement('li');
-            li.className = 'mb-4';
-            const school = getEn(item.affiliation);
-            const dept = getEn(item.department);
-            const date = item.to_date ? item.to_date.substring(0, 4) : '';
-            li.innerHTML = `<strong>${school}</strong><br>${dept}${date ? '<br>Completed: ' + date : ''}`;
-            educationList.appendChild(li);
+            let content = `<div class="text-sm text-gray-500 mb-1">${item.date} <span class="px-2 py-0.5 rounded text-xs ${item.category === 'Award' ? 'bg-yellow-100 text-yellow-800' : 'bg-blue-100 text-blue-800'}">${item.category}</span></div>`;
+
+            if (item.url) {
+                content += `<a href="${item.url}" target="_blank" class="block hover:text-blue-600 transition-colors">${item.title}</a>`;
+            } else {
+                content += `<p>${item.title}</p>`;
+            }
+
+            div.innerHTML = content;
+            whatsNewList.appendChild(div);
         });
     }
 
