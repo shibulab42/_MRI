@@ -86,32 +86,62 @@ document.addEventListener('DOMContentLoaded', () => {
                 return response.text();
             })
             .then(text => {
-                const lines = text.split('\n').filter(line => line.trim() !== '');
+                const lines = text.split('\n');
+                let currentItem = null;
+
+                const renderItem = (item) => {
+                    if (!item) return;
+
+                    const div = document.createElement('div');
+                    div.className = 'news-item mb-4 pb-2 border-b border-gray-100 last:border-0';
+
+                    let content = `<div class="text-sm text-gray-500 mb-1">${item.date} <span class="px-2 py-0.5 rounded text-xs ${item.category.includes('Award') ? 'bg-yellow-100 text-yellow-800' : 'bg-blue-100 text-blue-800'}">${item.category}</span></div>`;
+
+                    // Main Title
+                    content += `<p class="font-medium text-gray-800">${item.title}</p>`;
+
+                    // Description / Citation / URL from subsequent lines
+                    if (item.description) {
+                        // Check if description has URL format: Text | URL
+                        const descMatch = item.description.match(/^(.*?)\s*\|\s*(https?:\/\/.+?)\s*$/);
+                        if (descMatch) {
+                            const descText = descMatch[1];
+                            const descUrl = descMatch[2];
+                            content += `<a href="${descUrl}" target="_blank" class="block text-sm text-blue-600 hover:text-blue-800 mt-1">${descText}</a>`;
+                        } else {
+                            content += `<p class="text-sm text-gray-600 mt-1">${item.description}</p>`;
+                        }
+                    } else if (item.url) {
+                        content += `<a href="${item.url}" target="_blank" class="block text-sm text-blue-600 hover:text-blue-800 mt-1">Link</a>`;
+                    }
+
+                    div.innerHTML = content;
+                    whatsNewList.appendChild(div);
+                };
+
                 lines.forEach(line => {
-                    // Format: YYYY.MM [Category] Title | URL
+                    if (!line.trim()) return;
+
+                    // Format: YYYY.MM [Category] Title | URL (Optional on same line)
                     const match = line.match(/^(\d{4}\.\d{2})\s+\[(.*?)\]\s+(.*?)(?:\s*\|\s*(.*))?$/);
 
                     if (match) {
-                        const date = match[1];
-                        const category = match[2];
-                        const title = match[3];
-                        const url = match[4];
+                        if (currentItem) renderItem(currentItem);
 
-                        const div = document.createElement('div');
-                        div.className = 'news-item mb-4 pb-2 border-b border-gray-100 last:border-0';
-
-                        let content = `<div class="text-sm text-gray-500 mb-1">${date} <span class="px-2 py-0.5 rounded text-xs ${category.includes('Award') ? 'bg-yellow-100 text-yellow-800' : 'bg-blue-100 text-blue-800'}">${category}</span></div>`;
-
-                        if (url) {
-                            content += `<a href="${url.trim()}" target="_blank" class="block hover:text-blue-600 transition-colors">${title}</a>`;
-                        } else {
-                            content += `<p>${title}</p>`;
-                        }
-
-                        div.innerHTML = content;
-                        whatsNewList.appendChild(div);
+                        currentItem = {
+                            date: match[1],
+                            category: match[2],
+                            title: match[3],
+                            url: match[4],
+                            description: ''
+                        };
+                    } else if (currentItem) {
+                        if (currentItem.description) currentItem.description += ' ';
+                        currentItem.description += line.trim();
                     }
                 });
+
+                if (currentItem) renderItem(currentItem);
             })
             .catch(error => {
                 console.error('Error loading news:', error);
@@ -271,7 +301,11 @@ if (collaboratorsContainer && typeof manualProfile !== 'undefined' && manualProf
         const div = document.createElement('div');
         div.className = 'member-card-small';
         if (typeof member === 'object') {
-            div.innerHTML = `<p><strong>${member.name_en} (${member.name_ja})</strong><br>${member.affiliation}</p>`;
+            let content = `<strong>${member.name_en} (${member.name_ja})</strong><br>${member.affiliation}`;
+            if (member.url) {
+                content += `<br><a href="${member.url}" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm">ResearchMap</a>`;
+            }
+            div.innerHTML = `<p>${content}</p>`;
         } else {
             div.innerHTML = `<p>${member}</p>`;
         }

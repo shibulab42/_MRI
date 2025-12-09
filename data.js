@@ -37,7 +37,8 @@ const manualProfile = {
             {
                 "name_ja": "吉丸 大輔",
                 "name_en": "Daisuke Yoshimaru",
-                "affiliation": "Jikei University School of Medicine, Division of Regenerative Medicine / Department of Radiology, Tokyo Medical University"
+                "affiliation": "Jikei University School of Medicine, Division of Regenerative Medicine / Department of Radiology, Tokyo Medical University",
+                "url": "https://researchmap.jp/D_maru"
             },
             {
                 "name_ja": "臼井 圭介",
