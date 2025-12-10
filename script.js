@@ -47,6 +47,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // --- Research Overview (Home) ---
+    const homeOverview = document.getElementById('home-research-overview-content');
+    if (homeOverview && typeof manualProfile !== 'undefined' && manualProfile.research_interests) {
+        if (typeof manualProfile.research_interests === 'string') {
+            homeOverview.textContent = manualProfile.research_interests;
+        } else {
+            homeOverview.textContent = manualProfile.research_interests.en || manualProfile.research_interests.ja;
+        }
+    }
+
     // --- Affiliations ---
     const affiliationsList = document.getElementById('affiliations-list');
     if (affiliationsList) {
