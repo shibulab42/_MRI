@@ -34,26 +34,19 @@ const manualProfile = {
     ],
     "lab_members": {
         "collaborators": [
-            {
-                "name_ja": "吉丸 大輔",
-                "name_en": "Daisuke Yoshimaru",
-                "affiliation": "Jikei University School of Medicine, Division of Regenerative Medicine / Department of Radiology, Tokyo Medical University",
-                "url": "https://researchmap.jp/D_maru"
-            },
-            {
-                "name_ja": "臼井 圭介",
-                "name_en": "Keisuke Usui",
-                "affiliation": "Faculty of Health Science, Department of Radiological Technology, Juntendo University"
-            },
-            {
-                "name_ja": "林 直弥",
-                "name_en": "Naoya Hayashi",
-                "affiliation": "Department of Radiology, Tokyo Medical University"
-            }
+            "吉丸 大輔 Daisuke Yoshimaru",
+            "Jikei University School of Medicine, Division of Regenerative Medicine",
+            "Department of Radiology, Tokyo Medical University",
+            "reseachmap:https://researchmap.jp/D_maru",
+            "臼井 圭介 Keisuke Usui",
+            "Faculty of Health Science, Department of Radiological Technology, Juntendo University",
+            "林 直弥 Naoya Hyashi",
+            "Department of Radiology, Tokyo Medical University"
         ],
         "masters": [
             "赤羽 萌衣",
-            "橋 彩乃"
+            "橋 彩乃",
+            "髙木未佳（社会人）"
         ],
         "undergraduates": [
             "富田晴翔",
@@ -62,27 +55,28 @@ const manualProfile = {
             "清水航世",
             "小笠原和",
             "髙野里菜",
-            "上ノ山勇斗"
+            "上ノ山勇斗",
+            "小川隼輝",
+            "倉田夏希",
+            "齋藤康太",
+            "谷口将太",
+            "伴珠央音",
+            "湯浅ほのか",
+            "渡瀬陽斗"
         ]
     },
     "awards": [
-        "2025年4月 ISMRM Travel Award, 日本磁気共鳴医学会 - 渋川周平",
-        "2025年3月 第27回日本ヒト脳マッピング学会 早期キャリア研究者奨励賞, 日本ヒト脳マッピング学会 - 渋川周平",
-        "2021年4月 2020年度日本放射線技術学会 技術奨励賞（撮影分野（MR））, 日本放射線技術学会 - 渋川周平",
-        "2020年4月 第76回日本放射線技術学会総会学術大会 Cypos賞 President Award, 日本放射線技術学会 - 渋川周平"
-    ],
-    "research_interests": {
-        "ja": "磁気共鳴画像（MRI）を用いたヒトの生体機能評価を専門とし、脳神経系および骨格筋に関する定量的イメージングの研究に取り組んでいます。\n定量磁化率マッピング（QSM）や温度・血流イメージングなどの先進的手法を用い、運動負荷時の骨格筋代謝の可視化や、精神・神経疾患に伴う脳微細構造の変化の解明を目指しています。\nまた、リハビリテーション医学分野との共同研究を通じて、画像診断技術の臨床応用や治療評価への貢献にも取り組んでいます。\nMRIの可能性を拡張し、医療・スポーツ・神経科学をつなぐイメージング技術の発展に貢献することを目指しています。",
-        "en": "We specialize in the evaluation of human biological functions using Magnetic Resonance Imaging (MRI), conducting research on quantitative imaging of the nervous system and skeletal muscle.\nUsing advanced techniques such as Quantitative Susceptibility Mapping (QSM) and temperature/blood flow imaging, we aim to visualize skeletal muscle metabolism during exercise and elucidate changes in brain microstructure associated with psychiatric and neurological disorders.\nWe are also working on the clinical application of diagnostic imaging technologies and contributing to treatment evaluation through collaborative research with the field of rehabilitation medicine.\nWe aim to expand the possibilities of MRI and contribute to the development of imaging technologies that connect medicine, sports, and neuroscience."
-    }
-};
-
-const manualPublications = {
+        "2025年4月ISMRM Travel Award, 日本磁気共鳴医学会 渋川周平",
+        "2025年3月第27回日本ヒト脳マッピング学会 早期キャリア研究者奨励賞, 日本ヒト脳マッピング学会 渋川周平",
+        "2021年4月2020年度日本放射線技術学会 技術奨励賞（撮影分野（MR））, 日本放射線技術学会 渋川周平",
+        "2020年4月第76回日本放射線技術学会総会学術大会 Cypos賞 President Award, 日本放射線技術学会 渋川周平",
+        "Research Interests: 磁気共鳴画像（MRI）を用いたヒトの生体機能評価を専門とし、脳神経系および骨格筋に関する定量的イメージングの研究に取り組んでいます。",
+        "定量磁化率マッピング（QSM）や温度・血流イメージングなどの先進的手法を用い、運動負荷時の骨格筋代謝の可視化や、精神・神経疾患に伴う脳微細構造の変化の解明を目指しています。 また、リハビリテーション医学分野との共同研究を通じて、画像診断技術の臨床応用や治療評価への貢献にも取り組んでいます。"
+    ]
+};\n\nconst manualPublications = {
     "international_journals": [
-        "Koike S, Maikusa N, Cai L, Ueda I, Shibukawa S, Aso T, Tanaka SC, Hayashi T. Estimation of the Intracranial Volume Is Crucial in Multi-Site Studies: Reliability for Longitudinal Investigations and Traveling Subjects. Hum Brain Mapp. 2025 Nov;46(16):e70405. doi: 10.1002/hbm.70405. PubMed PMID: 41190774; PubMed Central PMCID: PMC12587433.",
-        "Motoyama M, Yamaguchi T, Hamasuna M, Kawashima K, Katagiri N, Tanabe S, Shibukawa S, Fujiwara T. Effects of Very Low-Intensity Transcranial Ultrasound Stimulation on Corticospinal Excitability and Motor Performance in Healthy Individuals. Ultrasound Med Biol. 2025 Nov;51(11):1984-1990. doi: 10.1016/j.ultrasmedbio.2025.07.009. Epub 2025 Aug 5. PubMed PMID: 40764145.",
-        "Shibukawa S, Yoshimaru D, Hiyama Y, Saho T, Ozawa T, Usui K, Goto M, Sakamoto H, Kyogoku S, Daida H. Predicting perceived exertion during high-intensity exercise using quantitative MRI: insights from T2* value and muscle cross-sectional area. Radiol Phys Technol. 2025 Sep;18(3):746-755. doi: 10.1007/s12194-025-00927-w. Epub 2025 Jun 15. PubMed PMID: 40518471.",
-        "Konta N, Hayashi N, Shibukawa S, Horie T, Niwa T, Obara M, Kawamura Y, Miyati T. Appropriate strength of acceleration selective-motion sensitized gradient for non-triggered, non-contrast enhanced magnetic resonance angiography of the lower extremities. Magn Reson Imaging. 2025 Sep;121:110416. doi: 10.1016/j.mri.2025.110416. Epub 2025 May 8. PubMed PMID: 40348297.",
+        "Yoshimaru D, Ouchi K, Shibukawa S, Ozawa M, Hirabayashi M, Yuzawa A, Tsurugizawa T, Oishi K, Okano HJ. Data-driven schizophrenia subtyping via brain atrophy trajectories and functional connectivity. Transl Psychiatry. 2026 Mar 19;16(1):229. doi: 10.1038/s41398-026-03968-w.",
+        "Shibukawa S, Ozawa T, Takabayashi K, Mizuta K, Uchida W, Yamanaka K, Kim J, Yamazaki K, Iwasaki T, Mizuguchi N, Hagiwara A, Nakaya M, Takahashi M, Waki H, Aoki S, Kamagata K. Associations between MR Imaging-derived Metrics under Exercise Load, Wingate Test Results, and Sprint Performance. Magn Reson Med Sci. 2026 Jan 8. doi: 10.2463/mrms.mp.2025-0122.",
         "Muro I, Isoiwa T, Shibukawa S, Usui K, Otsuka Y. Using Deep Learning to Simultaneously Reduce Noise and Motion Artifacts in Brain MR Imaging. Magn Reson Med Sci. 2025 Feb 13. doi: 10.2463/mrms.mp.2024-0098. Epub ahead of print. PMID: 39938896.",
         "Takahashi K, Noda Y, Hondo N, Shibukawa S, Kamagata K, Wada M, Honda S, Homma S, Tsukazaki A, Tsugawa S, Tobari Y, Moriyama S, Taniguchi K, Koike S, Cassidy C, Mimura M, Uchida H, Nakajima S. Abnormal neuritic microstructures in the anterior limb of internal capsules in treatment-resistant depression - A cross-sectional NODDI study. J Psychiatr Res. 2025 Feb 7;183:93-99. doi: 10.1016/j.jpsychires.2025.02.007. Epub ahead of print. PMID: 39954542.",
         "Hasegawa S, Yoshimaru D, Hayashi N, Shibukawa S, Takagi M, Murai H. Analyzing the relationship between specific brain structural changes and the diffusion tensor image analysis along the perivascular space index in idiopathic normal pressure hydrocephalus. J Neurol. 2024 Dec 12;272(1):56. doi: 10.1007/s00415-024-12850-y. PMID: 39666072.",
@@ -128,11 +122,11 @@ const manualPublications = {
     ],
     "books": [
         "MR撮像技術学, 日本放射線技術学会, 齋藤, 茂芳, 渋川周平 (担当:分担執筆, 範囲:MR_Hydrography), オーム社 2024年10月 (ISBN: 9784274232626)",
-        "室伊三男 (編集), 遠藤和之，梶原直，渋川周平，高野隼，中村智哉，西尾広明，山本和幸（著）, “現場で役立つMRI読本”, PILAR PRESS, May, 2014"
+        "室伊三男 (編集), 遠藤和之，梶原直，渋川周平，高野隼，中村智哉，西尾広明，山本和幸（著）, \"現場で役立つMRI読本\", PILAR PRESS, May, 2014"
     ],
     "domestic_conferences": [
-        "渋川周平, “3.0TMRIにおけるアーチファクト”, 第70回日本放射線技術学会総会学術大会.基礎講座, 2014年4月",
-        "渋川周平, “脊椎MRIにおける基礎から応用シークエンスまで“，第75回日本放射線技術学会総会学術大会.第72回撮影部会"
+        "渋川周平, \"3.0TMRIにおけるアーチファクト\", 第70回日本放射線技術学会総会学術大会.基礎講座, 2014年4月",
+        "渋川周平, \"脊椎MRIにおける基礎から応用シークエンスまで\"，第75回日本放射線技術学会総会学術大会.第72回撮影部会"
     ],
     "international_conferences": [
         "Shibukawa S, kan H, Noda Y, Nakajima S, Takabayashi K, Kamagata K, Koike S. Subcortical Analysis in Major Depressive Disorder Using Apparent Fiber Density and Quantitative Susceptibility Mapping. Neuro2024. (Fukuoka Japan)",
@@ -140,24 +134,22 @@ const manualPublications = {
         "Shibukaw S, Niwa T, Miyati T, Saito M, Ogino T, Yoshimaru D, Kuroda K. Measurement of intraventricular temperature in the whole brain using second order motion compensation DTI, ISMRM 27th Annual Meeting & Exhibition. (Montreal. Canada.)",
         "Horie　T, Kajihara N, Saito H, Shibukawa S, Takano S, Konta N, Obara M, Ogino T, Niwa T, Kuroda K, Matsumae M, \" Visualization of irregular CSF flow by dynamic iMSDE SSFP using acceleration- selective motion - sensitized gradient (AS-MSG)\", ISMRM 27th Annual Meeting & Exhibition. (Montreal. Canada.)",
         "Konta N, Shibukawa S, Obara M, Akamine Y, Horie T, Okazaki T, Nagafuji Y, Niwa T, Imai Y, \" A comparison of Enhanced Acceleration-Selective Arterial Spin Labeling (eAccASL) and Background Suppressed Single shot TFE-TRANCE (BASS TRANCE) for the peripheral arteries \", ISMRM 27th Annual Meeting & Exhibition. (Montreal. Canada.)",
-        "Horie　T, Kajihara N, Saito H, Shibukawa S, Takano S, Konta N, Obara M, Ogino T, Niwa T, Kuroda K, Matsumae M, “Visualization of CSF flow of whole brain using 3D dynamic iMSDE SSFP”, ISMRM 27th Annual Meeting & Exhibition. (Montreal. Canada.)",
-        "Shibukawa S, konta N, Niwa T, Obara M, Miyati T, Imai Y, Iwatsubo T, “Non-enhanced and non-gated MR angiography for peripheral arteries using improved acceleration-selective arterial spin labelling (iAccASL)” , Radiological Society of North America 2018. (Chicago. USA.)",
-        "Akamine Y, Obara M, Togao O, Shibukawa S, Yoneyama M, Okuaki T, Van Cauteren　M, Chida N, Iwatsubo T, “Robust　Visualization of MCA Main Trunk by Improved Acceleration-Selective Arterial Spin Labeling (iAccASL) for Intracranial MR Angiography” , ISMRM 25th Annual Meeting & Exhibition. (Hawaii. USA.)",
-        "Takano S, Ogino T, Shibukawa S, Horie T, Muro I, Kajihara N, Saito T, Niwa T, Kazama T, Imai Y, “A Novel Technique for 4D Time-of-Flight MR Angiography using Double Adiabatic Inversion Recovery Pulses”, ISMRM 25th Annual Meeting & Exhibition. (Hawaii. USA.)",
+        "Horie　T, Kajihara N, Saito H, Shibukawa S, Takano S, Konta N, Obara M, Ogino T, Niwa T, Kuroda K, Matsumae M, \"Visualization of CSF flow of whole brain using 3D dynamic iMSDE SSFP\", ISMRM 27th Annual Meeting & Exhibition. (Montreal. Canada.)",
+        "Shibukawa S, konta N, Niwa T, Obara M, Miyati T, Imai Y, Iwatsubo T, \"Non-enhanced and non-gated MR angiography for peripheral arteries using improved acceleration-selective arterial spin labelling (iAccASL)\" , Radiological Society of North America 2018. (Chicago. USA.)",
+        "Akamine Y, Obara M, Togao O, Shibukawa S, Yoneyama M, Okuaki T, Van Cauteren　M, Chida N, Iwatsubo T, \"Robust　Visualization of MCA Main Trunk by Improved Acceleration-Selective Arterial Spin Labeling (iAccASL) for Intracranial MR Angiography\" , ISMRM 25th Annual Meeting & Exhibition. (Hawaii. USA.)",
+        "Takano S, Ogino T, Shibukawa S, Horie T, Muro I, Kajihara N, Saito T, Niwa T, Kazama T, Imai Y, \"A Novel Technique for 4D Time-of-Flight MR Angiography using Double Adiabatic Inversion Recovery Pulses\", ISMRM 25th Annual Meeting & Exhibition. (Hawaii. USA.)",
         "Obara　M, Togao O, Fujima N, Shibukawa S, Yoneyama M, Okuaki T, Nakamura M, Van Cauteren　M, \" Scheme optimization for inflow and outflow visualization in non-contrast enhanced dynamic MRA based on pseudo-continuous arterial spin labeling \", ISMRM 25th Annual Meeting & Exhibition. (Hawaii. USA.)",
         "Horie T, Kajihara N, Shibukawa S, Takano S, Saitou T, Niwa T, Matsumae M, Kuroda K, Obara M, Ogino T, Muro I, \"Improvement of dynamic improved motion-sensitized driven-equilibrium steady-state free precession to visualize the irregular motion of cerebrospinal fluid\", ISMRM 25th Annual Meeting & Exhibition. (Hawaii. USA.)",
         "Nomura T, Niwa T, Shibukawa S, Imai Y, \" Visibility of the draining location of the thoracic duct to the venous system on balanced turbo field echo with extended k-space sampling\", ISMRM 25th Annual Meeting & Exhibition. (Hawaii. USA.)",
         "Shibukawa S, Miyati T, Ohno N, NIWA T, Ogino T, Muro I, Imai Y, \" Optimal strategy for measuring intraventricular temperature using Acceleration motion compensation DWI\", ISMRM 25th Annual Meeting & Exhibition. (Hawaii. USA.)",
-        "Nakamura T, Shibukawa S, Sainokami Y, Horie T, Muro I, Hasebe T, Imai Y, Ogino T “Assessment of fractional anisotropy of heart using ECG gating and second moment nulling pulse”, ISMRM 24th Annual Meeting & Exhibition. (Singapore.)",
-        "Niwa T, Yoneda T, Shibukawa S, Kazama T, Takahara T, Imai Y, \" Age-related white matter changes on phase difference enhanced imaging in children”, ISMRM 24th Annual Meeting & Exhibition. (Singapore.)",
-        "Obara　M, Togao O, Okuaki T, Shibukawa S, Yoneyama M, Van Cauteren　M, “ Non-contrast enhanced 4D intracranial MR angiography based on pseudo-continuous arterial spin labelling (pCASL) with the keyhole technique”, ISMRM 24th Annual Meeting & Exhibition. (Singapore.)",
-        "Shibukawa S, Miyati T, Ohno N, NIWA T, Ogino T, Muro I, Imai Y, “Acceleration motion compensation DWI for measuring intraventricular temperature.”, ISMRM 24th Annual Meeting & Exhibition. (Singapore.)",
-        "Niwa T, Yoneda T, Hara T, Sekiguchi T, Nomura T, Okazaki T, Shibukawa S, Yanagimachi N, Takahara T, Imai Y, “Phase distribution of white matter using phase difference”, ISMRM 22nd Annual Meeting & Exhibition. (Milano. Italy.)",
-        "Shibukawa S, Miyati T, Imai Y, Nishio H, Nakamura T, Ogino T, Muro I, “Time-SLIP with pencil beam pulse for observing CSF flow dynamics.”, ISMRM 22nd Annual Meeting & Exhibition. (Milano. Italy.)."
+        "Nakamura T, Shibukawa S, Sainokami Y, Horie T, Muro I, Hasebe T, Imai Y, Ogino T \"Assessment of fractional anisotropy of heart using ECG gating and second moment nulling pulse\", ISMRM 24th Annual Meeting & Exhibition. (Singapore.)",
+        "Niwa T, Yoneda T, Shibukawa S, Kazama T, Takahara T, Imai Y, \" Age-related white matter changes on phase difference enhanced imaging in children\", ISMRM 24th Annual Meeting & Exhibition. (Singapore.)",
+        "Obara　M, Togao O, Okuaki T, Shibukawa S, Yoneyama M, Van Cauteren　M, \" Non-contrast enhanced 4D intracranial MR angiography based on pseudo-continuous arterial spin labelling (pCASL) with the keyhole technique\", ISMRM 24th Annual Meeting & Exhibition. (Singapore.)",
+        "Shibukawa S, Miyati T, Ohno N, NIWA T, Ogino T, Muro I, Imai Y, \"Acceleration motion compensation DWI for measuring intraventricular temperature.\", ISMRM 24th Annual Meeting & Exhibition. (Singapore.)",
+        "Niwa T, Yoneda T, Hara T, Sekiguchi T, Nomura T, Okazaki T, Shibukawa S, Yanagimachi N, Takahara T, Imai Y, \"Phase distribution of white matter using phase difference\", ISMRM 22nd Annual Meeting & Exhibition. (Milano. Italy.)",
+        "Shibukawa S, Miyati T, Imai Y, Nishio H, Nakamura T, Ogino T, Muro I, \"Time-SLIP with pencil beam pulse for observing CSF flow dynamics.\", ISMRM 22nd Annual Meeting & Exhibition. (Milano. Italy.)."
     ]
-};
-
-const researcherData = [
+};\n\nconst researcherData = [
     {
         "insert": {
             "type": "researchers",
@@ -12110,4 +12102,4 @@ const researcherData = [
             "social_contribution_type": "lecture"
         }
     }
-];
+];\n

@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (!line.trim()) return;
 
                     // Format: YYYY.MM [Category] Title | URL (Optional on same line)
-                    const match = line.match(/^(\d{4}\.\d{2})\s+\[(.*?)\]\s+(.*?)(?:\s*\|\s*(.*))?$/);
+                    const match = line.match(/^(\d{4}\.\d{1,2})\s+\[(.*?)\]\s+(.*?)(?:\s*\|\s*(.*))?$/);
 
                     if (match) {
                         if (currentItem) renderItem(currentItem);
