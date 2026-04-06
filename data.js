@@ -73,7 +73,9 @@ const manualProfile = {
         "Research Interests: 磁気共鳴画像（MRI）を用いたヒトの生体機能評価を専門とし、脳神経系および骨格筋に関する定量的イメージングの研究に取り組んでいます。",
         "定量磁化率マッピング（QSM）や温度・血流イメージングなどの先進的手法を用い、運動負荷時の骨格筋代謝の可視化や、精神・神経疾患に伴う脳微細構造の変化の解明を目指しています。 また、リハビリテーション医学分野との共同研究を通じて、画像診断技術の臨床応用や治療評価への貢献にも取り組んでいます。"
     ]
-};\n\nconst manualPublications = {
+};
+
+const manualPublications = {
     "international_journals": [
         "Yoshimaru D, Ouchi K, Shibukawa S, Ozawa M, Hirabayashi M, Yuzawa A, Tsurugizawa T, Oishi K, Okano HJ. Data-driven schizophrenia subtyping via brain atrophy trajectories and functional connectivity. Transl Psychiatry. 2026 Mar 19;16(1):229. doi: 10.1038/s41398-026-03968-w.",
         "Shibukawa S, Ozawa T, Takabayashi K, Mizuta K, Uchida W, Yamanaka K, Kim J, Yamazaki K, Iwasaki T, Mizuguchi N, Hagiwara A, Nakaya M, Takahashi M, Waki H, Aoki S, Kamagata K. Associations between MR Imaging-derived Metrics under Exercise Load, Wingate Test Results, and Sprint Performance. Magn Reson Med Sci. 2026 Jan 8. doi: 10.2463/mrms.mp.2025-0122.",
@@ -149,7 +151,9 @@ const manualProfile = {
         "Niwa T, Yoneda T, Hara T, Sekiguchi T, Nomura T, Okazaki T, Shibukawa S, Yanagimachi N, Takahara T, Imai Y, \"Phase distribution of white matter using phase difference\", ISMRM 22nd Annual Meeting & Exhibition. (Milano. Italy.)",
         "Shibukawa S, Miyati T, Imai Y, Nishio H, Nakamura T, Ogino T, Muro I, \"Time-SLIP with pencil beam pulse for observing CSF flow dynamics.\", ISMRM 22nd Annual Meeting & Exhibition. (Milano. Italy.)."
     ]
-};\n\nconst researcherData = [
+};
+
+const researcherData = [
     {
         "insert": {
             "type": "researchers",
@@ -12102,4 +12106,4 @@ const manualProfile = {
             "social_contribution_type": "lecture"
         }
     }
-];\n
+];

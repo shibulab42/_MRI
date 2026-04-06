@@ -171,8 +171,8 @@ except Exception as e:
     print(f"Error reading file: {e}")
 
 with open(output_path, 'w', encoding='utf-8') as f:
-    f.write("const manualProfile = " + json.dumps(manual_profile, ensure_ascii=False, indent=4) + ";\\n\\n")
-    f.write("const manualPublications = " + json.dumps(manual_publications, ensure_ascii=False, indent=4) + ";\\n\\n")
-    f.write("const researcherData = " + json.dumps(data, ensure_ascii=False, indent=4) + ";\\n")
+    f.write("const manualProfile = " + json.dumps(manual_profile, ensure_ascii=False, indent=4) + ";\n\n")
+    f.write("const manualPublications = " + json.dumps(manual_publications, ensure_ascii=False, indent=4) + ";\n\n")
+    f.write("const researcherData = " + json.dumps(data, ensure_ascii=False, indent=4) + ";\n")
 
 print("data.js regenerated successfully with Lab Members and Awards.")
