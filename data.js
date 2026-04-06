@@ -32,6 +32,10 @@ const manualProfile = {
             "en": "Brain Image Analysis"
         }
     ],
+    "research_interests": {
+        "ja": "磁気共鳴画像（MRI）を用いたヒトの生体機能評価を専門とし、脳神経系および骨格筋に関する定量的イメージングの研究に取り組んでいます。\n定量磁化率マッピング（QSM）や温度・血流イメージングなどの先進的手法を用い、運動負荷時の骨格筋代謝の可視化や、精神・神経疾患に伴う脳微細構造の変化の解明を目指しています。\nまた、リハビリテーション医学分野との共同研究を通じて、画像診断技術の臨床応用や治療評価への貢献にも取り組んでいます。\nMRIの可能性を拡張し、医療・スポーツ・神経科学をつなぐイメージング技術の発展に貢献することを目指しています。",
+        "en": "Our laboratory utilizes advanced MRI technology and AI (machine learning) to focus on the imaging of skeletal muscle fiber distribution and brain health screening (Brain Dock). We are conducting research on brain age estimation using MRI-based neuroimaging, cross-body interactions, and subtype classification. We are recruiting individuals interested in MRI and image analysis, as well as those interested in sports medicine and neuroscience."
+    },
     "lab_members": {
         "collaborators": [
             {

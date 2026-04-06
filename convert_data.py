@@ -105,9 +105,13 @@ def parse_profile_txt(filepath):
                 if text:
                     pubs[current_category].append(text)
 
-    return lab_members, awards, pubs
+    # Extract Research Interests
+    ri_match = re.search(r'Research Interests:\n(.*?)\n+Publications:', content, re.DOTALL)
+    research_interests_ja = ri_match.group(1).strip() if ri_match else ""
 
-lab_members, awards, manual_publications = parse_profile_txt(profile_path)
+    return lab_members, awards, pubs, research_interests_ja
+
+lab_members, awards, manual_publications, research_interests_ja = parse_profile_txt(profile_path)
 
 manual_profile = {
     "name": {
@@ -125,6 +129,10 @@ manual_profile = {
         { "ja": "骨格筋イメージング", "en": "Skeletal Muscle Imaging" },
         { "ja": "脳画像解析", "en": "Brain Image Analysis" }
     ],
+    "research_interests": {
+        "ja": research_interests_ja,
+        "en": "Our laboratory utilizes advanced MRI technology and AI (machine learning) to focus on the imaging of skeletal muscle fiber distribution and brain health screening (Brain Dock). We are conducting research on brain age estimation using MRI-based neuroimaging, cross-body interactions, and subtype classification. We are recruiting individuals interested in MRI and image analysis, as well as those interested in sports medicine and neuroscience."
+    },
     "lab_members": lab_members,
     "awards": awards
 }
