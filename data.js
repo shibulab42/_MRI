@@ -34,14 +34,22 @@ const manualProfile = {
     ],
     "lab_members": {
         "collaborators": [
-            "吉丸 大輔 Daisuke Yoshimaru",
-            "Jikei University School of Medicine, Division of Regenerative Medicine",
-            "Department of Radiology, Tokyo Medical University",
-            "reseachmap:https://researchmap.jp/D_maru",
-            "臼井 圭介 Keisuke Usui",
-            "Faculty of Health Science, Department of Radiological Technology, Juntendo University",
-            "林 直弥 Naoya Hyashi",
-            "Department of Radiology, Tokyo Medical University"
+            {
+                "name_ja": "吉丸 大輔",
+                "name_en": "Daisuke Yoshimaru",
+                "affiliation": "Jikei University School of Medicine, Division of Regenerative Medicine<br>Department of Radiology, Tokyo Medical University",
+                "url": "https://researchmap.jp/D_maru"
+            },
+            {
+                "name_ja": "臼井 圭介",
+                "name_en": "Keisuke Usui",
+                "affiliation": "Faculty of Health Science, Department of Radiological Technology, Juntendo University"
+            },
+            {
+                "name_ja": "林 直弥",
+                "name_en": "Naoya Hayashi",
+                "affiliation": "Department of Radiology, Tokyo Medical University"
+            }
         ],
         "masters": [
             "赤羽 萌衣",

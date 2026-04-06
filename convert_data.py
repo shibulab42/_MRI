@@ -18,13 +18,25 @@ def parse_profile_txt(filepath):
         "undergraduates": []
     }
     
-    # Extract collaborators
-    collab_match = re.search(r'collaborators\n(.*?)\n\nMaster', content, re.DOTALL)
-    if collab_match:
-        collab_text = collab_match.group(1).strip()
-        for line in collab_text.split('\n'):
-            if line.strip():
-                lab_members["collaborators"].append(line.strip())
+    # Extract collaborators (hardcoded format to preserve beautiful rendering)
+    lab_members["collaborators"] = [
+        {
+            "name_ja": "吉丸 大輔",
+            "name_en": "Daisuke Yoshimaru",
+            "affiliation": "Jikei University School of Medicine, Division of Regenerative Medicine<br>Department of Radiology, Tokyo Medical University",
+            "url": "https://researchmap.jp/D_maru"
+        },
+        {
+            "name_ja": "臼井 圭介",
+            "name_en": "Keisuke Usui",
+            "affiliation": "Faculty of Health Science, Department of Radiological Technology, Juntendo University"
+        },
+        {
+            "name_ja": "林 直弥",
+            "name_en": "Naoya Hayashi",
+            "affiliation": "Department of Radiology, Tokyo Medical University"
+        }
+    ]
     
     # Extract Master's students
     masters_match = re.search(r"Master's Course\n(.*?)\n\nUndergraduate", content, re.DOTALL)
