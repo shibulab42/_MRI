@@ -129,8 +129,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     whatsNewList.appendChild(div);
                 };
 
-                lines.forEach(line => {
-                    if (!line.trim()) return;
+                lines.forEach(rawLine => {
+                    const line = rawLine.trim();
+                    if (!line) return;
 
                     // Format: YYYY.MM [Category] Title | URL (Optional on same line)
                     const match = line.match(/^(\d{4}\.\d{1,2})\s+\[(.*?)\]\s+(.*?)(?:\s*\|\s*(.*))?$/);
@@ -147,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         };
                     } else if (currentItem) {
                         if (currentItem.description) currentItem.description += ' ';
-                        currentItem.description += line.trim();
+                        currentItem.description += line;
                     }
                 });
 
