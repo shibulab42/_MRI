@@ -1,0 +1,17 @@
+2026.4 [Publication] 共同研究者である吉丸先生との論文（精神疾患の脳画像によるサブタイピング）が採択されました！
+Yoshimaru D, Ouchi K, Shibukawa S, Ozawa M, Hirabayashi M, Yuzawa A, Tsurugizawa T, Oishi K, Okano HJ. Data-driven schizophrenia subtyping via brain atrophy trajectories and functional connectivity. Transl Psychiatry. 2026 Mar 19;16(1):229. doi: 10.1038/s41398-026-03968-w. 
+
+2026.1 [Publication] 短距離アスリートに関する骨格筋MRI論文が採択されました！
+Shibukawa S, Ozawa T, Takabayashi K, Mizuta K, Uchida W, Yamanaka K, Kim J, Yamazaki K, Iwasaki T, Mizuguchi N, Hagiwara A, Nakaya M, Takahashi M, Waki H, Aoki S, Kamagata K. Associations between MR Imaging-derived Metrics under Exercise Load, Wingate Test Results, and Sprint Performance. Magn Reson Med Sci. 2026 Jan 8. doi: 10.2463/mrms.mp.2025-0122. 
+
+2025.11 [Publication] 骨格筋MRIに関する論文が採択されました！
+Predicting perceived exertion during high-intensity exercise using quantitative MRI (Shibukawa S et al. Radiol Phys Technol) | https://pubmed.ncbi.nlm.nih.gov/40518471/
+
+2025.04 [Award] ISMRM Travel Award (International Society for Magnetic Resonance in Medicine)
+2025.03 [Award] Early Career Researcher Award, The 27th Annual Meeting of the Organization for Human Brain Mapping (Japan)
+
+2025.02 [Publication] Using Deep Learning to Simultaneously Reduce Noise and Motion Artifacts in Brain MR Imaging (Muro I et al. Magn Reson Med Sci) | https://pubmed.ncbi.nlm.nih.gov/39938896/
+2024.11 [Publication] 骨格筋MRIに関する論文が採択されました！
+Differential T2* changes in tibialis anterior and soleus: Influence of exercise type and perceived exertion (Shibukawa S et al. J Biomech) | https://pubmed.ncbi.nlm.nih.gov/39579591/
+2024.11 [Publication] Relationship between regional volume changes and water diffusion in fixed marmoset brains (Yoshimaru D et al. Sci Rep) | https://pubmed.ncbi.nlm.nih.gov/39505977/
+2024.03 [Publication] Alterations in subcortical magnetic susceptibility and disease-specific relationship with brain volume in major depressive disorder and schizophrenia (Shibukawa S et al. Transl Psychiatry) | https://pubmed.ncbi.nlm.nih.gov/38531856/
