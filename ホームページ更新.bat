@@ -1,60 +1,74 @@
 @echo off
-chcp 65001 >nul
+setlocal enableextensions
+
+rem Keep default code page to avoid locale-specific issues
+
+rem Always run from this script directory
+cd /d "%~dp0"
+
 echo =========================================
-echo ホームページ更新ツール
+echo Homepage update tool (v2026-05-12.2)
 echo =========================================
+echo Working directory: %CD%
 echo.
 
-:: -------------------------------------------------
-:: 1. データ自動変換
-:: -------------------------------------------------
-echo 1. データの自動変換を実行しています...
-python convert_data.py
-if %errorlevel% neq 0 (
-    echo.
-    echo [エラー] データ変換中に問題が発生しました。
-    pause
-    exit /b %errorlevel%
-)
-echo 完了しました.
-
-:: -------------------------------------------------
-:: 2. GitHub へ変更をアップロード (トークン読み込み)
-:: -------------------------------------------------
-echo.
-echo 2. GitHubへ変更をアップロード(公開)しています...
-
-:: ----- トークンファイルの場所 -----
-set "TOKEN_FILE=%~dp0Newtokun20260511.txt"
-
-:: ---- トークンが存在しない場合はエラーで止める ----
-if not exist "%TOKEN_FILE%" (
-    echo [エラー] トークンファイルが見つかりません: %TOKEN_FILE%
-    echo       正しいファイル名・場所を確認してください。
+if not exist "convert_data.py" (
+    echo [ERROR] convert_data.py was not found in: %CD%
+    echo Put this .bat in the same folder as convert_data.py and run it again.
     pause
     exit /b 1
 )
 
-:: ---- ファイルからトークンを取得（改行は除去） ----
-set /p GITHUB_TOKEN=<"%TOKEN_FILE%"
-set "GITHUB_TOKEN=%GITHUB_TOKEN: =%"
-
-:: ---- Git 操作 ----
-git add .
-git commit -m "Auto‑update website contents via batch file"
-git push https://%GITHUB_TOKEN%@github.com/shibulab42/_MRI.git
-
-if %errorlevel% neq 0 (
-    echo.
-    echo [エラー] サーバーへのアップロードに失敗しました。
-    echo   (Git のエラーメッセージは上に表示されています)
+echo [1/2] Running data conversion...
+python "%CD%\convert_data.py"
+if errorlevel 1 (
+    echo [ERROR] Data conversion failed.
     pause
-    exit /b %errorlevel%
+    exit /b 1
+)
+echo [OK] Data conversion finished.
+echo.
+
+echo [2/2] Uploading changes to GitHub...
+
+rem Token source priority:
+rem   1) GITHUB_TOKEN environment variable
+rem   2) token file: github_token.txt (same folder as this .bat)
+set "TOKEN_FILE=%CD%\github_token.txt"
+if not defined GITHUB_TOKEN (
+    if not exist "%TOKEN_FILE%" (
+        echo [ERROR] Token not found.
+        echo Set GITHUB_TOKEN or create github_token.txt next to this script.
+        pause
+        exit /b 1
+    )
+    set /p GITHUB_TOKEN=<"%TOKEN_FILE%"
+)
+
+if not defined GITHUB_TOKEN (
+    echo [ERROR] Token is empty.
+    pause
+    exit /b 1
+)
+
+git add .
+git commit -m "Auto-update website contents via batch file"
+if errorlevel 1 (
+    echo [ERROR] Commit failed (possibly no changes).
+    pause
+    exit /b 1
+)
+
+git push https://%GITHUB_TOKEN%@github.com/shibulab42/_MRI.git
+if errorlevel 1 (
+    echo [ERROR] Push failed.
+    pause
+    exit /b 1
 )
 
 echo.
 echo =========================================
-echo すべての更新が完了しました！
-echo （数分でサイトに反映されます → Ctrl+F5 でリロード）
+echo Update completed.
+echo Reload your site after a few minutes.
 echo =========================================
-pause >nul
+pause

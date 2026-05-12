@@ -2,9 +2,33 @@ import json
 import os
 import re
 
-jsonl_path = r'c:/Users/S.Shibukawa/.gemini/antigravity/scratch/rm_researchers20251203.jsonl'
-profile_path = r'c:/Users/S.Shibukawa/.gemini/antigravity/scratch/profile.txt'
-output_path = r'c:/Users/S.Shibukawa/.gemini/antigravity/scratch/data.js'
+SCRIPT_VERSION = '2026-05-12.1'
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+profile_path = os.path.join(BASE_DIR, 'profile.txt')
+output_path = os.path.join(BASE_DIR, 'data.js')
+
+# Prefer the latest rm_researchers*.jsonl in this repo folder
+jsonl_candidates = sorted(
+    [f for f in os.listdir(BASE_DIR) if re.match(r'rm_researchers.*\.jsonl$', f)],
+    reverse=True
+)
+jsonl_path = os.path.join(BASE_DIR, jsonl_candidates[0]) if jsonl_candidates else None
+
+print(f'[convert_data.py {SCRIPT_VERSION}]')
+print(f'BASE_DIR: {BASE_DIR}')
+print(f'profile_path: {profile_path}')
+print(f'jsonl_path: {jsonl_path}')
+print(f'output_path: {output_path}')
+
+if not os.path.exists(profile_path):
+    raise FileNotFoundError(f'profile.txt not found: {profile_path}')
+
+if not jsonl_path or not os.path.exists(jsonl_path):
+    raise FileNotFoundError('rm_researchers*.jsonl not found in script directory')
+
+
 
 # Read profile.txt to extract Lab Members and Awards
 def parse_profile_txt(filepath):
