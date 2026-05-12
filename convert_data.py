@@ -28,8 +28,6 @@ if not os.path.exists(profile_path):
 if not jsonl_path or not os.path.exists(jsonl_path):
     raise FileNotFoundError('rm_researchers*.jsonl not found in script directory')
 
-
-
 # Read profile.txt to extract Lab Members and Awards
 def parse_profile_txt(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
