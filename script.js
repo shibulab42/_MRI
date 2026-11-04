@@ -99,8 +99,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 const lines = text.split('\n');
                 let currentItem = null;
 
+                // 直近1年（12か月）以内のお知らせだけ表示する（news.txt の古い記録は残る）
+                const now = new Date();
+                const nowMonths = now.getFullYear() * 12 + now.getMonth() + 1;
+                const isRecent = (dateStr) => {
+                    const [y, m] = dateStr.split('.').map(Number);
+                    return nowMonths - (y * 12 + m) <= 12;
+                };
+
                 const renderItem = (item) => {
-                    if (!item) return;
+                    if (!item || !isRecent(item.date)) return;
 
                     const div = document.createElement('div');
                     div.className = 'news-item mb-4 pb-2 border-b border-gray-100 last:border-0';
