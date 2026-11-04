@@ -150,6 +150,22 @@ h2 {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
+/* What's New: 高さを左の Affiliations カードに合わせ、はみ出す分はカード内でスクロール */
+.news-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-card .news-container {
+    flex: 1 1 auto;
+    height: 0;            /* 行の高さを決めるのは左のカード */
+    min-height: 18rem;    /* 1列表示（スマホ）や左が短いときの最低限の高さ */
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 2rem), transparent);
+    mask-image: linear-gradient(to bottom, #000 calc(100% - 2rem), transparent);
+}
+
 .card h3 {
     margin-bottom: 0.5rem;
     color: var(--secondary-color);
