@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 330" role="img" aria-labelledby="t d">
+  <title id="t">Research summary</title>
+  <desc id="d">Quantitative MRI applied to the brain (neurofluids, psychiatric disorders, brain age, QSM) and skeletal muscle (exercise metabolism, sprint performance, perceived exertion, rehabilitation), connecting medicine, sports and neuroscience.</desc>
+  <style>
+    text { font-family: Inter, "Segoe UI", "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif; fill: #1e293b; }
+    .h { font-size: 15px; font-weight: 700; }
+    .b { font-size: 11px; fill: #334155; }
+    .chip { font-size: 10.5px; font-weight: 600; }
+    .pill { font-size: 12px; font-weight: 700; fill: #fff; }
+    .jp { font-size: 11px; fill: #64748b; }
+  </style>
+
+  <!-- connectors -->
+  <g stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="3 4" fill="none">
+    <path d="M192 92 H160"/>
+    <path d="M288 92 H320"/>
+  </g>
+  <circle cx="160" cy="92" r="3" fill="#0ea5e9"/>
+  <circle cx="320" cy="92" r="3" fill="#f43f5e"/>
+
+  <!-- Brain box -->
+  <rect x="8" y="14" width="152" height="198" rx="12" fill="#f0f9ff" stroke="#bae6fd"/>
+  <g transform="translate(84 52)" fill="none" stroke="#0ea5e9" stroke-width="2.2" stroke-linecap="round">
+    <path d="M0 -22 C-10 -26 -26 -22 -28 -8 C-36 -2 -34 14 -24 18 C-20 26 -6 26 0 20 Z" fill="#e0f2fe"/>
+    <path d="M0 -22 C10 -26 26 -22 28 -8 C36 -2 34 14 24 18 C20 26 6 26 0 20 Z" fill="#e0f2fe"/>
+    <path d="M-18 -10 C-10 -12 -8 -4 -14 0 M-22 8 C-14 4 -8 10 -12 14"/>
+    <path d="M18 -10 C10 -12 8 -4 14 0 M22 8 C14 4 8 10 12 14"/>
+  </g>
+  <text class="h" x="84" y="102" text-anchor="middle">Brain</text>
+  <text class="jp" x="84" y="117" text-anchor="middle">脳・神経</text>
+  <g class="b">
+    <text class="b" x="22" y="140">• Neurofluids / CSF</text>
+    <text class="b" x="22" y="158">• Psychiatric disorders</text>
+    <text class="b" x="22" y="176">• Brain age (AI)</text>
+    <text class="b" x="22" y="194">• Iron / QSM</text>
+  </g>
+
+  <!-- Muscle box -->
+  <rect x="320" y="14" width="152" height="198" rx="12" fill="#fff1f2" stroke="#fecdd3"/>
+  <g transform="translate(396 52)" stroke-linecap="round">
+    <path d="M-34 0 C-20 -24 20 -24 34 0 C20 24 -20 24 -34 0 Z" fill="#ffe4e6" stroke="#f43f5e" stroke-width="2.2"/>
+    <g stroke="#f43f5e" stroke-width="1.4" fill="none" opacity="0.8">
+      <path d="M-26 -6 C-10 -14 10 -14 26 -6"/>
+      <path d="M-28 0 H28"/>
+      <path d="M-26 6 C-10 14 10 14 26 6"/>
+    </g>
+    <path d="M-34 0 H-44 M34 0 H44" stroke="#f43f5e" stroke-width="3"/>
+  </g>
+  <text class="h" x="396" y="102" text-anchor="middle">Skeletal Muscle</text>
+  <text class="jp" x="396" y="117" text-anchor="middle">骨格筋</text>
+  <text class="b" x="334" y="140">• Exercise metabolism</text>
+  <text class="b" x="334" y="158">• Sprint performance</text>
+  <text class="b" x="334" y="176">• Perceived exertion</text>
+  <text class="b" x="334" y="194">• Rehabilitation</text>
+
+  <!-- MRI scanner -->
+  <g transform="translate(240 92)">
+    <circle r="46" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="3"/>
+    <circle r="22" fill="#fff" stroke="#7dd3fc" stroke-width="2"/>
+    <rect x="-30" y="4" width="60" height="6" rx="3" fill="#94a3b8"/>
+    <rect x="-52" y="40" width="104" height="8" rx="4" fill="#cbd5e1"/>
+  </g>
+  <text class="h" x="240" y="164" text-anchor="middle">Quantitative MRI</text>
+
+  <!-- method chips -->
+  <g>
+    <rect x="172" y="174" width="64" height="20" rx="10" fill="#e2e8f0"/>
+    <text class="chip" x="204" y="188" text-anchor="middle">QSM</text>
+    <rect x="244" y="174" width="64" height="20" rx="10" fill="#e2e8f0"/>
+    <text class="chip" x="276" y="188" text-anchor="middle">T2* / R2*</text>
+    <rect x="172" y="198" width="64" height="20" rx="10" fill="#e2e8f0"/>
+    <text class="chip" x="204" y="212" text-anchor="middle">Diffusion</text>
+    <rect x="244" y="198" width="64" height="20" rx="10" fill="#0f172a"/>
+    <text class="chip" x="276" y="212" text-anchor="middle" style="fill:#fff">AI</text>
+  </g>
+
+  <!-- goals -->
+  <g>
+    <rect x="34" y="246" width="116" height="30" rx="15" fill="#0ea5e9"/>
+    <text class="pill" x="92" y="266" text-anchor="middle">Medicine</text>
+    <text x="171" y="267" text-anchor="middle" style="font-size:16px;fill:#94a3b8;font-weight:700">×</text>
+    <rect x="192" y="246" width="96" height="30" rx="15" fill="#f43f5e"/>
+    <text class="pill" x="240" y="266" text-anchor="middle">Sports</text>
+    <text x="309" y="267" text-anchor="middle" style="font-size:16px;fill:#94a3b8;font-weight:700">×</text>
+    <rect x="330" y="246" width="116" height="30" rx="15" fill="#6366f1"/>
+    <text class="pill" x="388" y="266" text-anchor="middle">Neuroscience</text>
+  </g>
+  <text class="jp" x="240" y="304" text-anchor="middle" style="font-size:12px">MRIで、医療・スポーツ・神経科学をつなぐ</text>
+</svg>
